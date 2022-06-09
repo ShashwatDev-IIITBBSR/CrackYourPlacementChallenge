@@ -51,7 +51,7 @@ public:
     }
 };
 
-//Others Solution Using Senital Head
+//Others Solution Using Sentinel Head + Predecessor
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         // sentinel
