@@ -20,7 +20,8 @@ class Solution
             t->data=t->next->data;
         }    
         t->next=NULL;
-        /*Node *t;
+        /*Solution For Deletion with Head Pointer 
+        Node *t;
         t=head;
         if(t==del)
         {
