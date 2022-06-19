@@ -108,6 +108,15 @@ void delete_key(MinHeap &m,int index)
     replace(m,index,-1);
     extract_min(m);
 }
+void build_heap(MinHeap &m)//Build Heap from Random Array
+{
+    int i,p,k=m.curr_size;
+    p=m.parent(m.curr_size-1);
+    for(i=p;i>=0;i--)
+    {
+        heapify(m,i);
+    }
+}
 int main()
 {
     int s,k,i,n;
@@ -124,7 +133,7 @@ int main()
     }
     m.print_heap();
     cout<<endl;
-    heapify(m,0);
+    /*heapify(m,0);
     m.print_heap();
     cout<<endl;
     cout<<"Minimum value is "<<get_min(m);
@@ -136,6 +145,30 @@ int main()
     m.print_heap();
     cout<<endl;
     delete_key(m,4);
+    m.print_heap();*/
+    build_heap(m);
+    cout<<"l"<<endl;
     m.print_heap();
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
