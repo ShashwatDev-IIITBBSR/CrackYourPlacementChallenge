@@ -10,7 +10,7 @@ public:
             h=min(height[start],height[end]);
             d=(end-start)*h;
             maxi=max(maxi,d);
-            if(height[start]<height[end])//Going for next greater height
+            if(height[start]<height[end])//Going for next greater height from pointer which has smaller height
             {
                 start++;
             }
