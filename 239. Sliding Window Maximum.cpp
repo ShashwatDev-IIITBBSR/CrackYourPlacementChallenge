@@ -1,3 +1,4 @@
+//  All elements inside deque will be in decreasing order.
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k)
@@ -18,12 +19,12 @@ public:
             }
             else
             {
-                if(dq.front()==i-k){dq.pop_front();}
+                if(dq.front()==i-k){dq.pop_front();}//pop from front(if present)
                 while(!dq.empty()&&nums[dq.back()]<nums[i])
                 {
                     dq.pop_back();
                 }
-                dq.push_back(i);
+                dq.push_back(i);//push at back
                 vec.push_back(nums[dq.front()]);
             }
         }
