@@ -26,26 +26,19 @@ class Solution{
                 }
             }
         }
+        diff=0;
+        i=n;j=w;
+        while((i>=0)&&(j>=0)&&(mat[i][j]==0))
+        {
+            j--;
+            diff++;
+        }
         if(sum%2==0)
         {
-            diff=0;
-            i=n;j=w;
-            while((i>=0)&&(j>=0)&&(mat[i][j]==0))
-            {
-                j--;
-                diff++;
-            }
             return diff*2;
         }
         else
         {
-            diff=0;
-            i=n;j=w;
-            while((i>=0)&&(j>=0)&&(mat[i][j]==0))
-            {
-                j--;
-                diff++;
-            }
             return diff*2+1;
         }
 	} 
