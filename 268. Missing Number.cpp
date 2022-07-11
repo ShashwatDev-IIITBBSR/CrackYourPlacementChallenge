@@ -12,6 +12,7 @@ public:
     }
 };
 
+
 //Similar Approach but it takes less time
 //Using Maths formula 
 //1+2+3+....+n=n(n+1)/2;
@@ -29,3 +30,5 @@ public:
         return total_sum-curr_sum;
     }
 };*/
+
+/*
