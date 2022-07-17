@@ -30,7 +30,6 @@ public:
     }    
     void gameOfLife(vector<vector<int>>& board) 
     {
-        //unordered_map<int,int>umap;
         int i,j,n_row=board.size(),n_col=board[0].size();
         for(i=0;i<n_row;i++)
         {
