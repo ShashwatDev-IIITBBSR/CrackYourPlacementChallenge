@@ -2,7 +2,7 @@ struct trie_node
 {
     int value; // non zero if leaf
     trie_node_t *children[ALPHABET_SIZE];
-};*/
+};
 class Solution{
   public:
   void deleteKey(trie_node_t *root, char key[])
