@@ -23,3 +23,29 @@ class Solution {
         return dfs;
     }
 };
+
+//Another Method
+class Solution {
+  public:
+    // Function to return a list containing the DFS traversal of the graph.
+    vector<int>vec;
+    void dfs_graph(vector<int> adj[],int index,vector<bool>&visited)
+    {
+        vec.push_back(index);
+        visited[index]=1;
+        for(auto x:adj[index])
+        {
+            if(!visited[x])
+            {
+                dfs_graph(adj,x,visited);
+            }
+        }
+    }
+    vector<int> dfsOfGraph(int V, vector<int> adj[]) 
+    {
+        vector<bool>visited(V,false);
+        vec.clear();
+        dfs_graph(adj,0,visited);
+        return vec;
+    }
+};
