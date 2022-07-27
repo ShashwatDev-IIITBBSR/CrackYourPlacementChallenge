@@ -56,7 +56,7 @@ class Solution
     stack<int>st;
     void dfs(vector<int>adj[],int index,vector<bool>&visited)
     {
-        //dfs_visited[index]=1;
+        //dfs_visited[index]=1;//no need for this as it's Directed Acyclic Graph (DAG) 
         visited[index]=1;
         for(auto x:adj[index])
         {
