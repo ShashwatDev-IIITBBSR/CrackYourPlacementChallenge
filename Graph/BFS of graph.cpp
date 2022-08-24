@@ -1,3 +1,76 @@
+
+class Solution {
+  public:
+    // Function to return Breadth First Traversal of given graph.
+    vector<int> bfsOfGraph(int V, vector<int> adj[]) 
+    {
+        vector<int>vec;
+        vector<bool>vis(V,false);
+        queue<int>q;
+        int n=V;
+        for(int i=0;i<n;i++)//For all components
+        {
+            if(vis[i]==false)
+            {
+                q.push(i);
+                vis[i]=1;
+                vec.push_back(i);
+                while(!q.empty())
+                {
+                    int e=q.front();
+                    q.pop();
+                    for(auto x:adj[e])
+                    {
+                        if(vis[x]==false)
+                        {
+                            q.push(x);
+                            vis[x]=1;
+                            vec.push_back(x);
+                        }
+                    }
+                }
+            }
+        }
+        return vec;
+    }
+};
+
+class Solution {
+  public:
+    // Function to return Breadth First Traversal of given graph.
+    vector<int>vec;
+    void recursion(queue<int>q,vector<bool>&vis,vector<int>adj[])
+    {
+        queue<int>child;
+        while(!q.empty())
+        {
+            int e=q.front();
+            q.pop();
+            for(auto x:adj[e])
+            {
+                if(vis[x]==0)
+                {
+                    child.push(x);
+                    vec.push_back(x);
+                    vis[x]=1;
+                }
+            }
+        }
+        if(!child.empty()){recursion(child,vis,adj);}
+    }
+    vector<int> bfsOfGraph(int V, vector<int> adj[]) 
+    {
+        vec.push_back(0);
+        vector<bool>vis(V,0);
+        vis[0]=1;
+        queue<int>q;
+        q.push(0);
+        recursion(q,vis,adj);
+        return vec;
+    }
+};
+
+
 class Solution {
   public:
     // Function to return Breadth First Traversal of given graph.
