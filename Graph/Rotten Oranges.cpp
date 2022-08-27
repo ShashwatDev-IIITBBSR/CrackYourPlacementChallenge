@@ -61,7 +61,7 @@ class Solution
                 }
             }
             if(number_of_ones==0){break;}
-            if(number_of_ones==last){return -1;}
+            if(number_of_ones==last){return -1;}//not possible to rot all oranges
             last=number_of_ones;
             grid=rotting(grid);
             count++;
